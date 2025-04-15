@@ -9,28 +9,6 @@ export default function Home() {
   const [activeSection, setActiveSection] = useState('home')
 
 
-  const portfolioItems = [
-    {
-      id: 1,
-      title: "Cozy Corner Collection",
-      category: "Nap Pods & Sleep Zones",
-      image: "/images/Nekoma1-portfolio-1.jpeg" 
-    },
-    {
-      id: 2,
-      title: "Before & After Meowments", 
-      category: "Before & After Grooming",
-      image: "/images/Nekoma1-portfolio-2.jpeg"
-    },
-    {
-      id: 3,
-      title: " Meow Moments",
-      category: " Meow Moments",
-      image: "/images/Nekoma1-portfolio-3.jpeg"
-    }
-  ];
-
-
   const services = [
     { id: 1, name: 'Cat Boarding', description: 'Safe, cozy, and stress-free stay for your feline friends' },
     { id: 2, name: 'Grooming & Spa', description: 'Pampering sessions for happy, healthy cats' },
@@ -51,7 +29,7 @@ export default function Home() {
         <meta name="description" content="Fill your home with colour" />
       </Head>
 
-      {/* Header */}
+
       <header className="sticky top-0 z-10 bg-purple-200 shadow-sm py-5">
         <div className="container mx-auto px-5">
           <div className="flex flex-col md:flex-row justify-between items-center">
@@ -148,39 +126,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Portfolio Section */}
-        <section id="portfolio" className="py-16 bg-white rounded-lg shadow-sm">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold mb-12 text-center">PORTFOLIO</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {portfolioItems.map((item) => (
-                <div 
-                  key={item.id} 
-                  className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all cursor-pointer"
-                >
-                  {/* Tempat untuk gambar portfolio - silakan ganti dengan gambar Anda */}
-                  <div className="relative h-64 w-full">
-                    <Image
-                      src= {item.image}
-                      alt={item.title}
-                      layout="fill"
-                      objectFit="cover"
-                      className="transition-all duration-500 group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
-                    <div className="text-white opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
-                      <h3 className="text-xl font-bold">{item.title}</h3>
-                      <p className="text-sm">{item.category}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Section */}
         <section id="contact" className="py-16">
           <div className="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-sm">
             <h2 className="text-3xl font-bold mb-8 text-center">CONTACT US</h2>
@@ -226,7 +171,7 @@ export default function Home() {
         </section>
       </main>
 
-      {/* Footer */}
+
       <footer className="bg-purple-900 text-white py-10">
         <div className="container mx-auto px-5">
           <div className="flex flex-col md:flex-row justify-between items-center">
